@@ -1,0 +1,28 @@
+﻿
+
+.container {
+    width: min(calc(100vw - 2.5rem), 100rem);
+    margin-inline: auto;
+    height: inherit;
+}
+.grid_container{
+    display:grid;
+    place-items:center;
+}
+
+.flex {
+    display: flex;
+    gap: var(--gap, 1rem);
+}
+
+.grid {
+    display: grid;
+    gap: var(--gap, 1rem);
+}
+.auto_grid{
+   display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(45em, 1fr));
+        
+    //    gap:var(--gap, var(--space-1));
+}
+

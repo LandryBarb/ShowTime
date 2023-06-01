@@ -1,0 +1,92 @@
+﻿
+
+ //   width: 100vw;
+    //  :not(p){
+    //   width: inherit;
+    //  }
+
+$pulse-error: hsl(var(--error));
+$pulse-success: hsl(var(--success));
+
+$breakpoints:(
+    small: 40em,
+    medium: 80em,
+    large: 100em,
+    );
+
+
+
+@mixin mediaQry($key) {
+    $size: map-get($breakpoints, $key );
+
+    @media only screen and (min-width:$size) {
+        @content;
+    }
+}
+
+
+@mixin  dynamicColor($color) {
+    background: $color;
+    color: text-clr($color);
+}
+
+@mixin transition-base{
+    transition: all .5s ease-in-out;
+}
+
+@mixin text-shadow {
+    text-shadow: .1rem .2rem .4rem var(--clr-dark-100);
+}
+
+@mixin flex-center {
+    justify-content: center;
+    align-items: center;
+}
+@mixin after($content: "", $pos: absolute) {
+    position: relative;
+
+    &::after {
+        content: $content;
+        position: $pos;
+        @content;
+    }
+}
+
+
+@mixin hover-lift($color: $pulse-success) {
+    transition: transform 350ms ease-in-out;
+    /*  box-shadow: 0 .25em .5em 0 rgba(black, .2);*/
+
+    @include after() {
+        /*  box-shadow: 0 0 1.25em 0 rgba(black, .4);*/
+        transition: transform 350ms ease-in-out; //make variable
+        opacity: 0;
+    }
+
+    &:hover,
+    &:focus {
+        @include transition-base();
+        cursor: pointer;
+        transform: scale(1.05);
+        @include dynamicColor($color);
+
+        &:after {
+            opacity: 1;
+        }
+    }
+}
+
+
+@mixin pulse($name) {
+   
+    
+    animation: pulse 1s;
+    box-shadow: 0 0 0 2em transparent;
+    
+
+    @keyframes pulse {
+        0%{box-shadow: 0 0 0 $name;}
+    }
+}
+
+

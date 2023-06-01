@@ -1,0 +1,30 @@
+﻿//Font scales
+$font-scale:(
+    step:
+    (
+        "0": clamp(0.63rem, calc(0.72rem + -0.11vw), 0.69rem),
+        "1": clamp(0.83rem, calc(0.82rem + 0.08vw), 0.88rem),
+        "2": clamp(1.00rem, calc(0.92rem + 0.39vw), 1.25rem),
+        "3": clamp(1.20rem, calc(1.02rem + 0.88vw), 1.77rem),
+        "4": clamp(1.44rem, calc(1.11rem + 1.65vw), 2.50rem),
+        "5": clamp(1.73rem, calc(1.17rem + 2.80vw), 3.53rem),
+        "6": clamp(2.07rem, calc(1.17rem + 4.54vw), 5.00rem),
+        "7": clamp(2.49rem, calc(1.07rem + 7.11vw), 7.07rem),
+        "8": clamp(2.99rem, calc(1.07rem + 9.96vw), 10.00rem)
+    ),
+);
+
+
+
+//Font weights
+$font-weights:(
+    "lightest": 100,
+    "light": 200,
+    "medium": 300,
+    "base": 400,
+    "bold": 500,
+    "bolder": 600,
+    "boldest": 700,
+    
+);
+

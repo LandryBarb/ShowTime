@@ -1,0 +1,42 @@
+@use '../abstracts' as *;
+@use "sass:map";
+
+
+
+
+$ff-body: 'Quicksand', sans-serif;
+$ff-heading: 'Holtwood One SC', serif;
+
+
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $ff-heading;
+  
+}
+
+
+
+h1 {
+    
+    font-size: var(--fs-top-level-heading);
+    font-weight:var(--fw-boldest);
+}
+
+h2 {
+    font-size: var(--fs-mid-level-heading);
+    font-weight: var(--fw-base);
+}
+
+h3 {
+    font-size: var(--fs-sub-level-heading);
+    font-weight:var(--fw-light)
+}
+
+p {
+    font-family: $ff-body;
+ 
+    font-size: var(--fs-body);
+}
+
+
+

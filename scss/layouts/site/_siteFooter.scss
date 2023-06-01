@@ -1,0 +1,50 @@
+@use '../../abstracts' as *;
+@use '../../base' as *;
+@use '../../helpers' as *;
+
+.site_footer {
+    min-height: 100px;
+    background-color: hsl(var(--site-bg));
+   border-block-start: solid 1px hsl(var(--body));
+   font-family: var(--ff-body);
+  text-transform: capitalize;
+    width:100vw;
+    color: hsl(var(--body));
+    padding-block: 25px;
+
+    > .grid {
+        grid-template-columns: repeat(3, 1fr);
+        align-items: center;
+        justify-items: center;
+       
+
+        .badge {
+            grid-column: 1/-1;
+            height: 100%;
+            grid-row: 2;
+
+         
+
+           
+            address{
+               text-align: center;
+            }
+        }
+        .sitemap{
+            
+            grid-column:1/-1;
+            grid-row:1;
+
+
+         a:hover{
+            cursor: pointer;
+            color: hsl(var(--heading));
+            font-weight: var(--fw-bold);
+         }
+                      
+              
+        }
+
+      
+    }
+}

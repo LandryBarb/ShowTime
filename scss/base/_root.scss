@@ -1,0 +1,56 @@
+﻿@use "sass:string";
+@use '../abstracts' as *;
+
+
+
+:root {
+    @each $color-group, $shades in $color-map {
+        @each $shade, $value in $shades {
+          --clr-#{$color-group}-#{$shade}: #{$value};
+     }
+    }
+
+    --site-bg:var(--clr-background-400);
+    --body-text:var(--clr-body-400);
+    --brand:var(--clr-brand-400);
+    /**START FONTS***/
+    /**Font Scale **/
+    @each $step, $sizes in $font-scale {
+        @each $size, $value in $sizes {
+            --step-#{$size}: #{$value};
+        }
+    }
+    /**End Font Scale **/
+    /**Font Weights**/
+    @each $font-size, $value in $font-weights {
+        --fw-#{$font-size}: #{$value};
+    }
+    /**End Font Weights**/
+    /**END FONTS***/
+    /**SPACING**/
+    @each $space-size, $value in $spacing {
+        $number: string.slice($space-size, 7);
+        --space-#{$number}: #{$value};
+    }
+    /**END SPACING**/
+    /**CUSTOM PROPS***/
+    /**FONT SIZES**/
+    --fs-top-level-heading: var(--step-7);
+    --fs-mid-level-heading: var(--step-6);
+    --fs-sub-level-heading: var(--step-5);
+    --fs-body: var(--step-2);
+    --fs-primary-links: var(--step-1);
+    /**END FONT SIZES**/
+  
+    /**Shadows**/
+
+    --shadow-color: 40deg 16% 52%;
+    --shadow-elevation-low: 0.1px 0.1px 0.2px hsl(var(--shadow-color) / 0.14), 0.2px 0.2px 0.4px -0.5px hsl(var(--shadow-color) / 0.28), 0.5px 0.5px 1px -1px hsl(var(--shadow-color) / 0.41);
+    --shadow-elevation-medium: 0.1px 0.1px 0.2px hsl(var(--shadow-color) / 0.14), 0.5px 0.6px 1.1px -0.3px hsl(var(--shadow-color) / 0.25), 1.1px 1.2px 2.2px -0.7px hsl(var(--shadow-color) / 0.36), 2.4px 2.6px 4.8px -1px hsl(var(--shadow-color) / 0.47);
+    --shadow-elevation-high: 0.1px 0.1px 0.2px hsl(var(--shadow-color) / 0.12), 0.9px 1px 1.8px -0.1px hsl(var(--shadow-color) / 0.16), 1.6px 1.8px 3.3px -0.2px hsl(var(--shadow-color) / 0.2), 2.4px 2.7px 4.9px -0.4px hsl(var(--shadow-color) / 0.24), 3.4px 3.7px 6.8px -0.5px hsl(var(--shadow-color) / 0.28), 4.7px 5.1px 9.4px -0.6px hsl(var(--shadow-color) / 0.32), 6.4px 7.1px 12.9px -0.7px hsl(var(--shadow-color) / 0.36), 8.8px 9.7px 17.7px -0.9px hsl(var(--shadow-color) / 0.4), 12px 13.2px 24.1px -1px hsl(var(--shadow-color) / 0.44);
+    /**END CUSTOM PROPS***/
+
+    --page-content-bgColor: #f0f1f6;
+    --page-content-txtColor: #171616;
+    --page-content-blockColor: #fff;
+}

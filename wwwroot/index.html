@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Holtwood+One+SC&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+ 
+<link rel="stylesheet" href="css/main.css">
+    <title>Document</title>
+</head>
+<body>
+   <!-- Mouse Circle -->
+   <div class="mouse-circle"></div>
+   <div class="mouse-dot"></div>
+   <!-- End of Mouse Circle -->
+<div class="wrapper">
+      <!-- Page BG -->
+      <div class="page-bg"></div>
+      <!-- End of Page BG -->
+
+    <!-- Progress Bar -->
+    <a href="#" class="progress-bar center sticky">
+        <div class="half-circle"></div>
+        <div class="half-circle"></div>
+        <div class="half-circle-top"></div>
+        <div class="progress-bar-circle center">&#8595;</div>
+      </a>
+      <!-- End of Progress Bar -->
+
+
+         <!-- Navigation -->
+      <!-- Menu Icon -->
+      <div class="menu-icon center sticky">
+        <div class="menu-icon-line"></div>
+        <div class="menu-icon-line"></div>
+      </div>
+      <!-- End of Menu Icon -->
+
+      <!-- Navbar -->
+      <nav class="navbar">
+        <a href="#section-1" class="navbar-link pointer-enter pointer-enter"
+          >Home</a
+        >
+        <a href="#section-2" class="navbar-link pointer-enter">About</a>
+        <a href="#section-3" class="navbar-link pointer-enter">Work</a>
+        <a href="#section-4" class="navbar-link pointer-enter">Talents</a>
+        <!-- <a href="blog.html" class="navbar-link pointer-enter">Blog</a> -->
+        <a href="#section-5" class="navbar-link pointer-enter">Contact</a>
+      </nav>
+      <!-- End of Navbar -->
+      <!-- End of Navigation -->
+     
+      <main>
+          <section class="hero section-1" id="section-1">
+        <hgroup class="grid">
+            <h1 class="hero__heading">
+                LANDRY BARB II
+            </h1>
+            <p class="hero__subheading">Web designer &amp; frontend developer</p>
+        </hgroup>
+       <!-- <div class="hero_image">
+        <img src="./images/projects/HS5.png" alt="">
+       </div> -->
+    </section>
+    
+  
+
+    <section class="pitch section-2 " id="section-2">
+        <h2 class="section_heading massive_heading">
+            About
+        </h2>
+        <p class="pitch_text"></p>
+    </section>
+    
+  
+    <section class="work section-3" id="section-3" >
+      <h2 class="section_heading massive_heading" >
+            WORK
+        </h2>
+
+         <!-- Projects -->
+         <div class="projects " >
+          <div class="auto_grid">
+            <div class="project pointer-enter" >
+              <img src="/wwwroot/images/projects/project-1.png" />
+            </div>
+            <div class="project pointer-enter" >
+                <img src="/wwwroot/images/projects/project-2.png" />
+              </div>
+              <div class="project pointer-enter" >
+                <img src="/wwwroot/images/projects/project-3.png" />
+              </div>
+              <div class="project pointer-enter" >
+                <img src="/wwwroot/images/projects/project-4.png" />
+              </div>
+           
+          </div>
+         
+           
+          </div>
+          <!-- Project Hide Button -->
+          <button class="project-hide-btn">&laquo;Close</button>
+          <!-- End of Project Hide Button -->
+          <!-- End of Projects -->
+    </section>
+    <section class="talents section-4" id="section-4">
+        <h2 class="section_heading massive_heading">
+            talent
+        </h2>
+        <div class="talents_wrapper center">
+            <article class="talent">
+                <a href="#" class="talent_btn pointer-enter"><span>design</span></a>
+                <p class="talent_text">
+                    Landing Pages, User Flow, Wireframing, Prototyping, Mobile App, Web App, Figma,
+                </p>
+            </article>
+            <article class="talent">
+                <a href="#" class="talent_btn pointer-enter"><span>development</span></a>
+                <p class="talent_text">
+                  html/css, javascript, vue, responsive design, semantic markup,
+                </p>
+            </article>
+            <article class="talent">
+                <a href="#" class="talent_btn pointer-enter"><span>Low-no code</span></a>
+                <p class="talent_text">
+                    Webflow, wordpress, bubble, 
+                </p>
+            </article>
+            <article class="talent">
+                <a href="#" class="talent_btn pointer-enter"><span>content creation</span></a>
+                <p class="talent_text">
+                   blog, tutorials, youtube,
+                </p>
+            </article>
+        </div>
+    </section>
+   <section class="contact section-5" id="section-5">
+    <h2 class="section_heading massive_heading">
+      Contact
+    </h2>
+    <article class="form_wrapper">
+      <h3 class="form_heading">Let's collaborate</h3>
+      <form action="POST" data-netlify="true" class="contact_form center">
+        <input type="text" name="name" id="name" placeholder="Name" class="contact_form__input pointer-enter" autocomplete="off"/>
+        <p class="message">Error Message</p>
+        <input type="email" name="email" id="email" placeholder="Email" class="contact_form__input pointer-enter" autocomplete="off"/>
+        <p class="message">Error Message</p>
+        <select type="select" name="type of work" id="type"  class="contact_form__input pointer-enter" autocomplete="off">
+          <option value="">--Type of Work--</option>
+          <option value="Contract">Contract</option>
+          <option value="Fulltime">Fulltime</option>
+          <option value="Freelance">Freelance</option>
+
+        </select>
+        <p class="message">Error Message</p>
+        <textarea name="message" id="message" placeholder="Anything I should know?" class="contact_form__textarea contact_form__input pointer-enter" autocomplete="off"></textarea>
+        <p class="message">Error Message</p>
+
+        <input type="submit" value="Reach Out" class="form__btn pointer-enter">
+      </form>
+    </article>
+   </section>
+      </main>
+</div>
+    
+
+    <script src="./js/app.js"></script>
+</body>
+</html>

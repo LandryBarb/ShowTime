@@ -1,0 +1,52 @@
+﻿@use "sass:string";
+
+$spacing-base: 1rem;
+$lg-value: 1;
+
+$spacing:
+(
+  
+   
+        "space-1":clamp(0.75rem, calc(0.59rem + 0.78vw), 1.25rem),
+        "space-2":clamp(1.00rem, calc(0.73rem + 1.36vw), 1.88rem),
+        "space-3":clamp(1.50rem, calc(1.19rem + 1.55vw), 2.50rem),
+        "space-4":clamp(2.00rem, calc(1.46rem + 2.72vw), 3.75rem),
+        "space-5":clamp(3.00rem, calc(2.38rem + 3.11vw), 5.00rem),
+        "space-6":clamp(4.00rem, calc(2.91rem + 5.44vw), 7.50rem),
+      
+
+    
+);
+
+$sides: inline, inline-start, inline-end, block, block-start, block-end;
+
+@each $space-size, $value in $spacing {
+    $number: string.slice($space-size, 7);
+
+    /*@Utility Classes Paddding;*/
+    .padding{
+        &-#{$number}{
+        padding: $value;
+    }
+
+        @each $side in $sides{
+            &-#{$side}-#{$number}{
+                padding-#{$side}: $value;
+            }
+        }
+    }
+    /*@Utility Classes Margin;*/
+
+    .margin {
+        &-#{$number} {
+            margin: $value;
+        }
+
+        @each $side in $sides {
+            &-#{$side}-#{$number} {
+                margin-#{$side}: $value;
+            }
+        }
+    }
+}
+

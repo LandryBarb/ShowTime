@@ -1,0 +1,17 @@
+{
+  "name": "showtime",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "npx sass scss:wwwroot/css",
+    "sass:watch": "npx sass --watch  scss:wwwroot/css"
+ 
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.62.1"
+  }
+}

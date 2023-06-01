@@ -1,0 +1,22 @@
+﻿
+.flow > *:where(:not(:first-child)) {
+    margin-block-end: var(--flow-space, var(--space-3));
+}
+
+.sr-only {
+    position: absolute;
+    top: auto;
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px);
+    clip-path: inset(50%);
+    width: 1px;
+    height: 1px;
+    white-space: nowrap;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  

@@ -1,0 +1,22 @@
+
+
+
+@use '../base' as *;
+@use '../helpers' as *;
+
+
+.colors_wrapper{
+  
+}
+.color_wrapper{
+    display:grid;
+    grid-template-columns:1fr 2fr;
+ 
+}
+.color_blocks_wrapper{
+    display:flex;
+    justify-content:space-between;
+}
+.block{
+
+}

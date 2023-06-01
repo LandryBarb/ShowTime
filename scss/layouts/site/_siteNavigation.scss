@@ -1,0 +1,154 @@
+﻿@use '../../abstracts' as *;
+@use '../../base' as *;
+@use '../../helpers' as *;
+
+$primary-color: #333;
+$secondary-color: #f2f2f2;
+$base-spacing: 16px;
+$base-font-size: 16px;
+$h1-font-size: 48px;
+
+/* Mouse Circle */
+.mouse-circle,
+.mouse-dot {
+  border-radius: 50%;
+  position: fixed;
+  z-index: 300;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.mouse-circle {
+  width: 3rem;
+  height: 3rem;
+  border: 0.1rem solid #c7a622;
+  animation: mouseCircleAnim 10s infinite linear;
+}
+
+@keyframes mouseCircleAnim {
+  0% {
+    width: 6rem;
+    height: 6rem;
+  }
+  25% {
+    width: 8rem;
+    height: 8rem;
+  }
+  35% {
+    width: 4rem;
+    height: 4rem;
+  }
+  70% {
+    width: 8rem;
+    height: 8rem;
+  }
+  100% {
+    width: 6rem;
+    height: 6rem;
+  }
+}
+
+.mouse-dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: #9b0e0e;
+  animation: mouseDotAnim 10s infinite linear;
+}
+
+@keyframes mouseDotAnim {
+  0% {
+    width: 0.5rem;
+    height: 0.5rem;
+  }
+  55% {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  100% {
+    width: 0.5rem;
+    height: 0.5rem;
+  }
+}
+/* End of Mouse Circle */
+
+
+
+  /* Navigation */
+/* Menu Icon */
+.menu-icon {
+  position: fixed;
+  top: 3.5rem;
+  left: 100%;
+  width: 12rem;
+  height: 7rem;
+  flex-direction: column;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 100;
+  cursor: pointer;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.2s;
+  mix-blend-mode:hard-light;
+ @include mediaQry(small){
+  left: unset;
+  right: 0;
+ }
+}
+
+.menu-icon-line {
+  
+  width: 4rem;
+  height: 0.1rem;
+  background-color: var(--body-text);
+  margin: 0.5rem 0;
+  box-shadow: 0 0.3rem 0.5rem #000;
+}
+
+.show-menu-icon {
+  opacity: 1;
+  visibility: visible;
+}
+/* End of Menu Icon */
+
+/* Navbar */
+.navbar {
+ 
+  @include mediaQry(small){
+    justify-content: space-evenly;
+  }
+  position: fixed;
+  top: 0;
+  
+  width: 100%;
+ 
+  display: flex;
+  
+  padding-block:var(--fs-primary-links);
+  z-index: 100;
+  transition: opacity 0.5s, visibility 0.5s, transform 0.5s;
+  // background-color: var(--body-text);
+ 
+
+  
+}
+
+.navbar-link {
+  font-size: var(--fs-primary-links);
+  font-weight: var(--fw-bolder);
+  text-transform: uppercase;
+color: var(--brand);
+  margin: 0 var(--space-1);
+
+
+  
+  
+}
+
+.hide-navbar {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(10rem);
+}
+/* End of Navbar */
+/* End of Navigation */

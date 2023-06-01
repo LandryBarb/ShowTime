@@ -1,0 +1,15 @@
+@use '../../abstracts' as *;
+@use '../../base' as *;
+@use '../../helpers' as *;
+
+.site_header {
+    display: flex;
+    background-color: var(--site-bg);
+    align-items: center;
+    justify-content: flex-end;
+    margin-inline: var(--space-2);
+
+
+   
+}
+

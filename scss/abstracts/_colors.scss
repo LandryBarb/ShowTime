@@ -1,0 +1,71 @@
+﻿
+//White
+$white-100: hsla(0, 0%, 100%, 1);
+$white-80: hsla(0, 0%, 100%, 0.8);
+$white-40: hsla(0, 0%, 100% , 0.4);
+$white-20: hsla(0, 0% ,100% , 0.2);
+$white-10: hsla(0, 0%, 100% , 0.1);
+$white-5: hsla(0,0%, 100% , 0.50);
+
+
+$primary:hsla(57, 100%, 91%, 1);
+$secondary:hsla(18, 86%, 39%, 1);
+$body:hsla(204, 19%, 26%, 1);
+
+//Black
+$black-100: hsla(0, 0%, 0%, 1);
+$black-80: hsla(0, 0%, 0%, 0.8);
+$black-40: hsla(0, 0%, 0%, 0.4);
+$black-20: hsla(0, 0%, 0%, 0.2);
+$black-10: hsla(0, 0%, 0%, 0.1);
+$black-5: hsla(0, 0%, 0%, 0.05);
+
+//Primary
+$white-primary-100:hsla(210, 33%, 98% , 1);
+
+$blue-primary-100: hsla(201, 100%, 95%, 1);
+$purple-primary-100: hsla(215, 49%, 93%, 1);
+$purple-primary-50: hsla(215, 49%, 93%, 0.5);
+
+$black-primary-100: hsla(0, 0%, 20%, 1);
+$brand-primary-100: hsla(0, 0%, 11%, 1);
+
+
+
+
+
+
+//UX
+$purple-secondary-100: hsla(231, 94%, 79%, 1);
+$purple-secondary-200: hsla(239, 78%, 87%, 1);
+$blue-secondary-100: hsla(205, 40%, 76%, 1);
+$blue-secondary-200: hsla(202, 100%, 85%, 1);
+$green-secondary-100: hsla(158, 54%, 76%, 1);
+$green-secondary-200: hsla(124, 59%, 83%, 1);
+$yellow-secondary-100: hsla(47, 100%, 80%, 1);
+$red-secondary-100: hsla(0, 100%, 64%, 1);
+
+
+$color-map:(
+
+background:
+(
+    400:$primary
+),
+brand:
+(
+    400:$secondary
+),
+body:
+(
+    400: $body
+)
+   
+  );
+
+
+
+
+
+
+
