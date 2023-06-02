@@ -29,9 +29,14 @@ $screen-size: 2.5;
   transform: translate(-50%, -50%);
   @include mediaQry(small) {
     
-    right: 2rem;
-    bottom: 5rem;
+    right: 3rem;
+    bottom: 15rem;
    
+  }
+  @include mediaQry(medium){
+    bottom: 5rem;
+    
+
   }
 }
 
