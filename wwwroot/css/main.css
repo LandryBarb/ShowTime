@@ -1045,9 +1045,6 @@ p {
 }
 
 /* Projects */
-.projects {
-  margin-inline: auto;
-}
 .projects > .auto_grid {
   align-items: center;
   justify-items: center;
