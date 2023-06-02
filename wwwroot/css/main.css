@@ -760,6 +760,7 @@ p {
 /* End of Menu Icon */
 /* Navbar */
 .navbar {
+  overflow: hidden;
   position: fixed;
   top: 0;
   width: 100%;
@@ -1417,6 +1418,10 @@ p {
 body {
   font-family: "Quicksand", sans-serif;
   background-color: var(--site-bg);
+}
+
+body * {
+  border: 1px solid red;
 }
 
 /*# sourceMappingURL=main.css.map */
