@@ -43,7 +43,15 @@ const mouseCircleFn = (x, y) => {
 let hoveredElPosition = [];
 
 const stickyElement = (x, y, hoveredEl) => {
-  // Sticky Element
+  
+
+  const mobileScreenWidth = 600;
+
+    // If the screen width is less than or equal to the mobile screen width, return
+    if (window.innerWidth <= mobileScreenWidth) {
+      return;
+    }
+// Sticky Element
   if (hoveredEl.classList.contains("sticky")) {
     hoveredElPosition.length < 1 &&
       (hoveredElPosition = [hoveredEl.offsetTop, hoveredEl.offsetLeft]);
@@ -223,14 +231,20 @@ const aboutMeText = document.querySelector(".pitch_text");
 const aboutMeTextContent =
   "CRAFTING DIGITAL STAGES FOR ENTERTAINMENT CREATIVES AND BUSINESS TO SHOWCASE THEIR TALENTS.";
 
+// Define your breakpoint
+const breakpoint = 600; // adjust as needed
+  
 Array.from(aboutMeTextContent).forEach((char) => {
   const span = document.createElement("span");
   span.textContent = char;
   aboutMeText.appendChild(span);
 
-  span.addEventListener("mouseenter", (e) => {
-    e.target.style.animation = "aboutMeTextAnim 10s infinite";
-  });
+ // Only add the event listener if the window's width exceeds the breakpoint
+ if (window.innerWidth > breakpoint) {
+    span.addEventListener("mouseenter", (e) => {
+      e.target.style.animation = "aboutMeTextAnim 10s infinite";
+    });
+  }
 });
 // End of About Me Text
 
@@ -350,3 +364,11 @@ formInputs.forEach((input) => {
 // End of Form
 
 
+(function() {
+  var all = document.getElementsByTagName("*");
+  for (var i = 0, max = all.length; i < max; i++) {
+    if (all[i].scrollWidth > document.documentElement.clientWidth) {
+      console.log(all[i]);
+    }
+  }
+})();

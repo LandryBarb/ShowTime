@@ -19,7 +19,7 @@ $screen-size: 2.5;
 .progress-bar {
   position: fixed;
   bottom: 0rem;
-  right: 50%;
+  right: 0%;
   width: 5rem;
   height: 5rem;
   background-color: var(--body-text);
@@ -116,11 +116,18 @@ $screen-size: 2.5;
   text-align: center;
   // grid-column: 1/-1;
   // grid-row: 1/-1;
-  @include mediaQry(medium) {
-    text-align: start;
-    font-size: calc($screen-size * var(--step-7));
+  @include mediaQry(small) {
+    
+    font-size: calc($screen-size * var(--step-6));
     grid-column: 1/-1;
     grid-row: 1/-1;
+    
+
+  }
+  @include mediaQry(medium){
+    font-size: calc($screen-size * var(--step-7));
+  text-align: center;
+
   }
 }
 
@@ -135,13 +142,13 @@ $screen-size: 2.5;
   @include mediaQry(small) {
     grid-column: 1/-1;
     grid-row: 4;
-    font-size: var(--step-6);
+    font-size: var(--step-5);
   }
 }
 .massive_heading {
   font-size: calc(var(--step-8) * 2.5);
   text-align: center;
-  opacity: 0.5;
+  opacity: 0.3;
   color: var(--body-text);
 }
 
@@ -161,7 +168,8 @@ $screen-size: 2.5;
     grid-area: 1 / 1 / 2 / 2;
   }
   .massive_heading {
-    font-size: calc(var(--step-5) * 3);
+    font-size: calc(var(--step-4) * 3);
+    rotate: 10deg;
 
     @include mediaQry(small) {
       font-size: calc(var(--step-7) * 3.5);
@@ -177,20 +185,24 @@ $screen-size: 2.5;
     }
   }
   &_text span {
-    font-size: var(--step-6);
+    font-size: var(--step-5);
     margin-inline: auto;
     font-weight: bold;
-    color: var(--body-text);
+    color: var(--site-bg);
     letter-spacing: 0.3rem;
     line-height: 1.9;
 
     @include mediaQry(small) {
       line-height: 1.9;
+      color: var(--body-text);
+    font-size: var(--step-6);
+
+    mix-blend-mode: color-dodge;
+
     }
 
     // text-shadow: 0 0 1rem #9b0e0e;
     position: relative;
-    mix-blend-mode: color-dodge;
   }
 }
 @keyframes aboutMeTextAnim {
@@ -236,7 +248,7 @@ section {
   }
   .section_heading {
     grid-area: 1 / 1 / 2 / 2;
-    font-size: calc(var(--step-5) * 3);
+    font-size: calc(var(--step-4) * 3);
     @include mediaQry(small) {
       font-size: calc(var(--step-7) * 2.5);
     }
@@ -244,9 +256,11 @@ section {
 }
 /* Projects */
 .projects {
+  margin-inline: auto;
   & > .auto_grid {
     align-items: center;
     justify-items: center;
+    
   }
 }
 
@@ -407,8 +421,8 @@ section {
     grid-area: 1 / 1/ 2/ 2;
   }
 
-  .section_heading {
-    font-size: calc(var(--step-5) * 3);
+  .massive_heading {
+    font-size: calc(var(--step-4) * 3);
     @include mediaQry(small) {
       font-size: calc(var(--step-7) * 2.5);
     }
@@ -493,13 +507,14 @@ section {
   display: grid;
   position: relative;
   place-items: center;
+  padding-block: var(--space-7);
+
   .section_heading,
   .form_wrapper {
     grid-area: 1/1/2/2;
   }
   .massive_heading {
-    overflow: hidden;
-    font-size: calc(var(--step-4) * 3);
+    font-size: calc(var(--step-3) * 3);
     @include mediaQry(small) {
       font-size: calc(var(--step-6) * 2.5);
     }
