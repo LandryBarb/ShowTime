@@ -1214,7 +1214,38 @@ section:not(:first-of-type) {
   }
 }
 
+.project-live-link {
+  position: fixed;
+  display: block;
+  bottom: 5rem;
+  left: 1rem;
+  background-color: var(--brand);
+  border: none;
+  padding: var(--space-1);
+  border-radius: 5px;
+  font-weight: var(--fw-bolder);
+  color: #fff;
+  font-size: var(--step-3);
+  letter-spacing: 0.1rem;
+  cursor: pointer;
+  z-index: 200;
+  transform: scale(1);
+  visibility: visible;
+}
+@media only screen and (min-width: 48em) {
+  .project-live-link {
+    left: 5rem;
+    font-weight: unset;
+  }
+}
+
 .change.project-hide-btn {
+  transform: scale(1);
+  visibility: visible;
+  transition: transform 0.5s;
+}
+
+.change.project-live-link {
   transform: scale(1);
   visibility: visible;
   transition: transform 0.5s;

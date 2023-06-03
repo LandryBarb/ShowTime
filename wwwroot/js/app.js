@@ -250,6 +250,14 @@ Array.from(aboutMeTextContent).forEach((char) => {
 
 
 // Projects
+const projectUrls = [
+  "https://marksilvermanvoice.com/",
+  "https://counsio-staging.netlify.app/#/",
+  "https://www.qactual.com/",
+  "https://sprinklersnorthwest.com/",
+
+];
+
 const container = document.querySelector(".wrapper");
 const projects = document.querySelectorAll(".project");
 const projectHideBtn = document.querySelector(".project-hide-btn");
@@ -271,12 +279,19 @@ projects.forEach((project, i) => {
     bigImgWrapper.className = "project-img-wrapper";
     container.appendChild(bigImgWrapper);
 
+
     const bigImg = document.createElement("img");
     bigImg.className = "project-img";
     const imgPath = project.firstElementChild.getAttribute("src").split(".")[0];
     bigImg.setAttribute("src", `${imgPath}-big.png`);
     bigImgWrapper.appendChild(bigImg);
     document.body.style.overflowY = "hidden";
+
+    const liveLink = document.createElement("a");
+    liveLink.href = projectUrls[i];
+    liveLink.textContent = "View Live Site";
+    liveLink.className = "project-live-link";
+    bigImgWrapper.appendChild(liveLink);
 
     document.removeEventListener("scroll", scrollFn);
 
@@ -289,6 +304,7 @@ projects.forEach((project, i) => {
     };
 
     projectHideBtn.classList.add("change");
+    
 
     projectHideBtn.onclick = () => {
       projectHideBtn.classList.remove("change");
