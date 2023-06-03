@@ -18,17 +18,19 @@ $screen-size: 2.5;
 /* Progress Bar */
 .progress-bar {
   position: fixed;
-  bottom: 0rem;
+  bottom: 5rem;
   right: 0%;
-  width: 5rem;
-  height: 5rem;
+  width: 3rem;
+  height: 3rem;
   background-color: var(--body-text);
   border-radius: 50%;
   z-index: 200;
   overflow: hidden;
   transform: translate(-50%, -50%);
+  cursor: pointer;
   @include mediaQry(tablet) {
-    
+    width: 5rem;
+    height: 5rem;
     right: 3rem;
     bottom: 15rem;
    
@@ -64,17 +66,29 @@ $screen-size: 2.5;
 }
 
 .progress-bar-circle {
-  width: 4.5rem;
-  height: 4.5rem;
+  width: 2.5rem;
+  height: 2.5rem;
   background-color: var(--body-text);
   border-radius: 50%;
   color: var(--site-bg);
-  font-size: 3rem;
+  font-size: 2rem;
   z-index: 200;
   transition: transform 0.5s;
   pointer-events: none;
+  @include mediaQry(tablet){
+    width: 4.5rem;
+    height: 4.5rem;
+  }
 }
 /* End of Progress Bar */
+section:not(:first-of-type) {
+  padding-block: 7rem;
+
+  @include mediaQry(tablet){
+      padding-block: 10rem;
+ 
+}
+}
 
 .hero {
   margin-inline: auto;
@@ -219,14 +233,6 @@ $screen-size: 2.5;
 }
 /* End of About Me Text */
 
-section {
-
-
-  @include mediaQry(tablet){
-      padding-block: 10rem;
-  // max-width: 1920px;
-}
-}
 
 .contact {
   align-self: flex-end;
@@ -501,7 +507,7 @@ section {
   }
 }
 .change.talent_text {
-  height: 5rem;
+  height: 6rem;
   visibility: visible;
   opacity: 1;
 

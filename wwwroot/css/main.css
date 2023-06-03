@@ -617,35 +617,24 @@ p {
 
 .site_footer {
   min-height: 100px;
-  background-color: hsl(var(--site-bg));
-  border-block-start: solid 1px hsl(var(--body));
-  font-family: var(--ff-body);
+  border-block-start: solid 1px var(--body-text);
   text-transform: capitalize;
-  width: 100vw;
-  color: hsl(var(--body));
-  padding-block: 25px;
+  color: var(--body-text);
+  padding-block: var(--space-1);
 }
-.site_footer > .grid {
-  grid-template-columns: repeat(3, 1fr);
+.site_footer > .flex {
+  flex-direction: row;
+  justify-content: center;
   align-items: center;
-  justify-items: center;
+  margin: var(--space-2);
 }
-.site_footer > .grid .badge {
-  grid-column: 1/-1;
-  height: 100%;
-  grid-row: 2;
+.site_footer .copyright {
+  width: 100%;
 }
-.site_footer > .grid .badge address {
-  text-align: center;
-}
-.site_footer > .grid .sitemap {
-  grid-column: 1/-1;
-  grid-row: 1;
-}
-.site_footer > .grid .sitemap a:hover {
-  cursor: pointer;
-  color: hsl(var(--heading));
-  font-weight: var(--fw-bold);
+.site_footer ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
 }
 
 /* Mouse Circle */
@@ -653,7 +642,7 @@ p {
 .mouse-dot {
   display: none;
 }
-@media only screen and (min-width: 20em) {
+@media only screen and (min-width: 48em) {
   .mouse-circle,
   .mouse-dot {
     display: unset;
@@ -666,7 +655,7 @@ p {
   }
 }
 
-@media only screen and (min-width: 20em) {
+@media only screen and (min-width: 48em) {
   .mouse-circle {
     display: unset;
     width: 3rem;
@@ -768,6 +757,7 @@ p {
   padding-block: var(--space-1);
   z-index: 100;
   transition: opacity 0.5s, visibility 0.5s, transform 0.5s;
+  background-color: var(--body-text);
 }
 .navbar ul {
   justify-content: center;
@@ -782,7 +772,7 @@ p {
   font-size: var(--fs-primary-links);
   font-weight: var(--fw-bolder);
   text-transform: uppercase;
-  color: var(--brand);
+  color: var(--site-bg);
 }
 
 .hide-navbar {
@@ -823,18 +813,21 @@ p {
 /* Progress Bar */
 .progress-bar {
   position: fixed;
-  bottom: 0rem;
+  bottom: 5rem;
   right: 0%;
-  width: 5rem;
-  height: 5rem;
+  width: 3rem;
+  height: 3rem;
   background-color: var(--body-text);
   border-radius: 50%;
   z-index: 200;
   overflow: hidden;
   transform: translate(-50%, -50%);
+  cursor: pointer;
 }
 @media only screen and (min-width: 48em) {
   .progress-bar {
+    width: 5rem;
+    height: 5rem;
     right: 3rem;
     bottom: 15rem;
   }
@@ -869,18 +862,33 @@ p {
 }
 
 .progress-bar-circle {
-  width: 4.5rem;
-  height: 4.5rem;
+  width: 2.5rem;
+  height: 2.5rem;
   background-color: var(--body-text);
   border-radius: 50%;
   color: var(--site-bg);
-  font-size: 3rem;
+  font-size: 2rem;
   z-index: 200;
   transition: transform 0.5s;
   pointer-events: none;
 }
+@media only screen and (min-width: 48em) {
+  .progress-bar-circle {
+    width: 4.5rem;
+    height: 4.5rem;
+  }
+}
 
 /* End of Progress Bar */
+section:not(:first-of-type) {
+  padding-block: 7rem;
+}
+@media only screen and (min-width: 48em) {
+  section:not(:first-of-type) {
+    padding-block: 10rem;
+  }
+}
+
 .hero {
   margin-inline: auto;
 }
@@ -1023,12 +1031,6 @@ p {
   }
 }
 /* End of About Me Text */
-@media only screen and (min-width: 48em) {
-  section {
-    padding-block: 10rem;
-  }
-}
-
 .contact {
   align-self: flex-end;
 }
@@ -1313,7 +1315,7 @@ p {
 }
 
 .change.talent_text {
-  height: 5rem;
+  height: 6rem;
   visibility: visible;
   opacity: 1;
   transition: height 0.5s, opacity 0.5s 0.5s;

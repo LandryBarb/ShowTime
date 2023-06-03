@@ -13,7 +13,7 @@ $h1-font-size: 48px;
 .mouse-dot {
 
   display: none;
-  @include mediaQry(phone){
+  @include mediaQry(tablet){
     display: unset;
     border-radius: 50%;
     position: fixed;
@@ -27,7 +27,7 @@ $h1-font-size: 48px;
 
 .mouse-circle {
  
-@include mediaQry(phone){
+@include mediaQry(tablet){
   display: unset;
   width: 3rem;
   height: 3rem;
@@ -135,7 +135,7 @@ $h1-font-size: 48px;
   padding-block:var(--space-1);
   z-index: 100;
   transition: opacity 0.5s, visibility 0.5s, transform 0.5s;
-  // background-color: var(--body-text);
+  background-color: var(--body-text);
  
 ul{
  
@@ -151,7 +151,7 @@ ul{
   font-size:var(--fs-primary-links);
   font-weight: var(--fw-bolder);
   text-transform: uppercase;
-color: var(--brand);
+color: var(--site-bg);
   
 
   

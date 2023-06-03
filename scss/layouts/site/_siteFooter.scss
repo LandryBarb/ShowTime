@@ -4,47 +4,30 @@
 
 .site_footer {
     min-height: 100px;
-    background-color: hsl(var(--site-bg));
-   border-block-start: solid 1px hsl(var(--body));
-   font-family: var(--ff-body);
+   
+   border-block-start: solid 1px var(--body-text);
+   
   text-transform: capitalize;
-    width:100vw;
-    color: hsl(var(--body));
-    padding-block: 25px;
+    // width:100vw;
+    color: var(--body-text);
+    padding-block: var(--space-1);
 
-    > .grid {
-        grid-template-columns: repeat(3, 1fr);
+    > .flex {
+       flex-direction: row;
+        justify-content: center;
         align-items: center;
-        justify-items: center;
        
 
-        .badge {
-            grid-column: 1/-1;
-            height: 100%;
-            grid-row: 2;
-
-         
-
-           
-            address{
-               text-align: center;
-            }
-        }
-        .sitemap{
-            
-            grid-column:1/-1;
-            grid-row:1;
-
-
-         a:hover{
-            cursor: pointer;
-            color: hsl(var(--heading));
-            font-weight: var(--fw-bold);
-         }
-                      
-              
-        }
+       margin: var(--space-2);
 
       
+    }
+    .copyright{
+        width: 100%;
+    }
+    ul{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
     }
 }
