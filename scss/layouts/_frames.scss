@@ -1,7 +1,7 @@
 ﻿
 
 .container {
-    width: min(calc(100vw - 2.5rem), 100rem);
+    width: min(calc(100vw - 2.5rem), 150rem);
     margin-inline: auto;
     height: inherit;
 }
@@ -21,7 +21,7 @@
 }
 .auto_grid{
    display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(45em, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
         
     //    gap:var(--gap, var(--space-1));
 }

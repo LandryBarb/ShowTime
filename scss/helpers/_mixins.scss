@@ -1,92 +1,83 @@
-﻿
-
- //   width: 100vw;
-    //  :not(p){
-    //   width: inherit;
-    //  }
+﻿//   width: 100vw;
+//  :not(p){
+//   width: inherit;
+//  }
 
 $pulse-error: hsl(var(--error));
 $pulse-success: hsl(var(--success));
 
-$breakpoints:(
-    small: 40em,
-    medium: 80em,
-    large: 100em,
-    );
-
-
+$breakpoints: (
+  phone: 20em,
+  tablet: 48em,
+  laptop: 64em,
+  desktop: 80em,
+);
 
 @mixin mediaQry($key) {
-    $size: map-get($breakpoints, $key );
-
-    @media only screen and (min-width:$size) {
-        @content;
-    }
+    $size: map-get($breakpoints, $key);
+        @media only screen and (min-width: $size) {
+            @content;
+        }   
 }
 
 
-@mixin  dynamicColor($color) {
-    background: $color;
-    color: text-clr($color);
+@mixin dynamicColor($color) {
+  background: $color;
+  color: text-clr($color);
 }
 
-@mixin transition-base{
-    transition: all .5s ease-in-out;
+@mixin transition-base {
+  transition: all 0.5s ease-in-out;
 }
 
 @mixin text-shadow {
-    text-shadow: .1rem .2rem .4rem var(--clr-dark-100);
+  text-shadow: 0.1rem 0.2rem 0.4rem var(--clr-dark-100);
 }
 
 @mixin flex-center {
-    justify-content: center;
-    align-items: center;
+  justify-content: center;
+  align-items: center;
 }
-@mixin after($content: "", $pos: absolute) {
-    position: relative;
+@mixin after($content: '', $pos: absolute) {
+  position: relative;
 
-    &::after {
-        content: $content;
-        position: $pos;
-        @content;
-    }
+  &::after {
+    content: $content;
+    position: $pos;
+    @content;
+  }
 }
-
 
 @mixin hover-lift($color: $pulse-success) {
-    transition: transform 350ms ease-in-out;
-    /*  box-shadow: 0 .25em .5em 0 rgba(black, .2);*/
+  transition: transform 350ms ease-in-out;
+  /*  box-shadow: 0 .25em .5em 0 rgba(black, .2);*/
 
-    @include after() {
-        /*  box-shadow: 0 0 1.25em 0 rgba(black, .4);*/
-        transition: transform 350ms ease-in-out; //make variable
-        opacity: 0;
+  @include after() {
+    /*  box-shadow: 0 0 1.25em 0 rgba(black, .4);*/
+    transition: transform 350ms ease-in-out; //make variable
+    opacity: 0;
+  }
+
+  &:hover,
+  &:focus {
+    @include transition-base();
+    cursor: pointer;
+    transform: scale(1.05);
+    @include dynamicColor($color);
+
+    &:after {
+      opacity: 1;
     }
-
-    &:hover,
-    &:focus {
-        @include transition-base();
-        cursor: pointer;
-        transform: scale(1.05);
-        @include dynamicColor($color);
-
-        &:after {
-            opacity: 1;
-        }
-    }
+  }
 }
-
 
 @mixin pulse($name) {
-   
-    
-    animation: pulse 1s;
-    box-shadow: 0 0 0 2em transparent;
-    
+  animation: pulse 1s;
+  box-shadow: 0 0 0 2em transparent;
 
-    @keyframes pulse {
-        0%{box-shadow: 0 0 0 $name;}
+  @keyframes pulse {
+    0% {
+      box-shadow: 0 0 0 $name;
     }
+  }
 }
-
-

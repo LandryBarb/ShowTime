@@ -364,11 +364,11 @@ formInputs.forEach((input) => {
 // End of Form
 
 
-// (function() {
-//   var all = document.getElementsByTagName("*");
-//   for (var i = 0, max = all.length; i < max; i++) {
-//     if (all[i].scrollWidth > document.documentElement.clientWidth) {
-//       console.log(all[i]);
-//     }
-//   }
-// })();
+(function() {
+  var all = document.getElementsByTagName("*");
+  for (var i = 0, max = all.length; i < max; i++) {
+    if (all[i].scrollWidth > document.documentElement.clientWidth) {
+      console.log(all[i]);
+    }
+  }
+})();

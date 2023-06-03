@@ -653,7 +653,7 @@ p {
 .mouse-dot {
   display: none;
 }
-@media only screen and (min-width: 40em) {
+@media only screen and (min-width: 20em) {
   .mouse-circle,
   .mouse-dot {
     display: unset;
@@ -666,7 +666,7 @@ p {
   }
 }
 
-@media only screen and (min-width: 40em) {
+@media only screen and (min-width: 20em) {
   .mouse-circle {
     display: unset;
     width: 3rem;
@@ -737,7 +737,7 @@ p {
   transition: opacity 0.2s;
   mix-blend-mode: hard-light;
 }
-@media only screen and (min-width: 40em) {
+@media only screen and (min-width: 48em) {
   .menu-icon {
     left: unset;
     right: 0;
@@ -772,7 +772,7 @@ p {
 .navbar ul {
   justify-content: center;
 }
-@media only screen and (min-width: 40em) {
+@media only screen and (min-width: 48em) {
   .navbar ul {
     justify-content: space-evenly;
   }
@@ -794,7 +794,7 @@ p {
 /* End of Navbar */
 /* End of Navigation */
 .container {
-  width: min(100vw - 2.5rem, 100rem);
+  width: min(100vw - 2.5rem, 150rem);
   margin-inline: auto;
   height: inherit;
 }
@@ -816,7 +816,7 @@ p {
 
 .auto_grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(45em, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
 }
 
 /* End of Page BG */
@@ -833,13 +833,13 @@ p {
   overflow: hidden;
   transform: translate(-50%, -50%);
 }
-@media only screen and (min-width: 40em) {
+@media only screen and (min-width: 48em) {
   .progress-bar {
     right: 3rem;
     bottom: 15rem;
   }
 }
-@media only screen and (min-width: 80em) {
+@media only screen and (min-width: 64em) {
   .progress-bar {
     bottom: 5rem;
   }
@@ -884,7 +884,7 @@ p {
 .hero {
   margin-inline: auto;
 }
-@media only screen and (min-width: 40em) {
+@media only screen and (min-width: 48em) {
   .hero {
     padding: unset;
   }
@@ -898,39 +898,53 @@ p {
 }
 
 .hero__heading {
-  font-size: calc(2.5 * var(--step-3));
   color: var(--brand);
   grid-column: 1/-1;
   grid-row: 1/3;
   text-align: center;
 }
-@media only screen and (min-width: 40em) {
+@media only screen and (min-width: 20em) {
   .hero__heading {
-    font-size: calc(2.5 * var(--step-6));
-    grid-column: 1/-1;
-    grid-row: 1/-1;
+    font-size: calc(2.5 * var(--step-2));
+  }
+}
+@media only screen and (min-width: 48em) {
+  .hero__heading {
+    font-size: calc(2.5 * var(--step-3));
+    text-align: center;
+  }
+}
+@media only screen and (min-width: 64em) {
+  .hero__heading {
+    font-size: calc(2.5 * var(--step-4));
+    text-align: center;
   }
 }
 @media only screen and (min-width: 80em) {
   .hero__heading {
+    grid-row: 1/-1;
     font-size: calc(2.5 * var(--step-7));
     text-align: center;
   }
 }
 
 .hero__subheading {
-  grid-row: 4;
   text-align: center;
   text-transform: capitalize;
   grid-column: 1/-1;
-  font-size: var(--step-6);
+  font-size: var(--step-4);
   font-weight: var(--fw-bold);
 }
-@media only screen and (min-width: 40em) {
+@media only screen and (min-width: 48em) {
   .hero__subheading {
-    grid-column: 1/-1;
     grid-row: 4;
     font-size: var(--step-5);
+  }
+}
+@media only screen and (min-width: 64em) {
+  .hero__subheading {
+    grid-column: 1/-1;
+    font-size: var(--step-6);
   }
 }
 
@@ -949,7 +963,7 @@ p {
   min-height: 100vh;
   align-items: center;
 }
-@media only screen and (min-width: 40em) {
+@media only screen and (min-width: 48em) {
   .pitch {
     min-height: unset;
   }
@@ -959,21 +973,20 @@ p {
   grid-area: 1/1/2/2;
 }
 .pitch .massive_heading {
-  font-size: calc(var(--step-4) * 3);
-  rotate: 10deg;
+  font-size: calc(var(--step-4) * 3.5);
 }
-@media only screen and (min-width: 40em) {
+@media only screen and (min-width: 48em) {
   .pitch .massive_heading {
-    font-size: calc(var(--step-7) * 3.5);
+    font-size: calc(var(--step-5) * 3.5);
   }
 }
 .pitch_text {
   text-align: center;
 }
-@media only screen and (min-width: 40em) {
+@media only screen and (min-width: 48em) {
   .pitch_text {
     text-align: unset;
-    max-width: 70%;
+    max-width: 80%;
     margin-inline: auto;
   }
 }
@@ -986,7 +999,7 @@ p {
   line-height: 1.9;
   position: relative;
 }
-@media only screen and (min-width: 40em) {
+@media only screen and (min-width: 48em) {
   .pitch_text span {
     line-height: 1.9;
     color: var(--body-text);
@@ -1010,10 +1023,9 @@ p {
   }
 }
 /* End of About Me Text */
-@media only screen and (min-width: 40em) {
+@media only screen and (min-width: 48em) {
   section {
     padding-block: 10rem;
-    max-width: 1920px;
   }
 }
 
@@ -1030,7 +1042,7 @@ p {
   position: relative;
   place-content: center;
 }
-@media only screen and (min-width: 80em) {
+@media only screen and (min-width: 48em) {
   .work {
     place-content: unset;
   }
@@ -1039,9 +1051,14 @@ p {
   grid-area: 1/1/2/2;
   font-size: calc(var(--step-4) * 3);
 }
-@media only screen and (min-width: 40em) {
+@media only screen and (min-width: 48em) {
   .work .section_heading {
-    font-size: calc(var(--step-7) * 2.5);
+    font-size: calc(var(--step-6) * 2.5);
+  }
+}
+@media only screen and (min-width: 64em) {
+  .work .section_heading {
+    font-size: calc(var(--step-6) * 2.5);
   }
 }
 
@@ -1049,13 +1066,18 @@ p {
 .projects > .auto_grid {
   align-items: center;
   justify-items: center;
+  gap: var(--space-1);
+}
+@media only screen and (min-width: 48em) {
+  .projects > .auto_grid {
+    grid-template-columns: repeat(auto-fit, minmax(45em, 1fr));
+  }
 }
 
 .project {
   width: 20rem;
-  height: 35rem;
+  height: 30rem;
   overflow: hidden;
-  margin: var(--space-5);
   background-color: #000;
   display: flex;
   justify-content: center;
@@ -1066,16 +1088,16 @@ p {
   perspective: 20rem;
   transition: opacity 0.5s;
 }
-@media only screen and (min-width: 40em) {
+@media only screen and (min-width: 48em) {
   .project {
-    width: 30rem;
-    height: 40rem;
-    margin: var(--space-1);
+    width: 25rem;
+    height: 35rem;
   }
 }
 
 .project img {
   width: 90%;
+  margin: auto;
   object-fit: cover;
   position: absolute;
   top: 2rem;
@@ -1152,7 +1174,7 @@ p {
   transform-origin: top center;
   animation: imgAnim 1s 1s both;
 }
-@media only screen and (min-width: 40em) {
+@media only screen and (min-width: 48em) {
   .project-img {
     padding: 7rem 20rem;
   }
@@ -1183,7 +1205,7 @@ p {
   transform: scale(0);
   visibility: hidden;
 }
-@media only screen and (min-width: 40em) {
+@media only screen and (min-width: 48em) {
   .project-hide-btn {
     right: 5rem;
     font-weight: unset;
@@ -1212,7 +1234,7 @@ p {
 .talents .massive_heading {
   font-size: calc(var(--step-4) * 3);
 }
-@media only screen and (min-width: 40em) {
+@media only screen and (min-width: 48em) {
   .talents .massive_heading {
     font-size: calc(var(--step-7) * 2.5);
   }
@@ -1234,7 +1256,7 @@ p {
   border-block-end: 0.2rem solid var(--brand);
   z-index: 1;
 }
-@media only screen and (min-width: 40em) {
+@media only screen and (min-width: 48em) {
   .talent {
     width: 70%;
   }
@@ -1245,9 +1267,14 @@ p {
   display: block;
   height: 3rem;
 }
-@media only screen and (min-width: 40em) {
+@media only screen and (min-width: 48em) {
   .talent_btn {
     padding-inline-end: unset;
+    height: 5rem;
+  }
+}
+@media only screen and (min-width: 64em) {
+  .talent_btn {
     height: 10rem;
   }
 }
@@ -1262,7 +1289,7 @@ p {
   text-transform: uppercase;
   transition: right 0.5s;
 }
-@media only screen and (min-width: 40em) {
+@media only screen and (min-width: 48em) {
   .talent_btn span {
     font-size: var(--step-6);
   }
@@ -1278,7 +1305,7 @@ p {
   opacity: 0;
   transition: all 0.2s;
 }
-@media only screen and (min-width: 40em) {
+@media only screen and (min-width: 48em) {
   .talent_text {
     font-size: var(--step-4);
     line-height: unset;
@@ -1291,7 +1318,7 @@ p {
   opacity: 1;
   transition: height 0.5s, opacity 0.5s 0.5s;
 }
-@media only screen and (min-width: 40em) {
+@media only screen and (min-width: 48em) {
   .change.talent_text {
     height: 15rem;
   }
@@ -1308,12 +1335,12 @@ p {
   grid-area: 1/1/2/2;
 }
 .contact .massive_heading {
-  font-size: calc(var(--step-3) * 3);
+  font-size: calc(var(--step-2) * 3.5);
   opacity: 0.1;
   color: var(--brand);
   padding-block-end: var(--space-6);
 }
-@media only screen and (min-width: 40em) {
+@media only screen and (min-width: 48em) {
   .contact .massive_heading {
     font-size: calc(var(--step-6) * 2.5);
   }
@@ -1329,7 +1356,7 @@ p {
   margin-block-end: var(--space-2);
   transition: opacity 0.3s;
 }
-@media only screen and (min-width: 40em) {
+@media only screen and (min-width: 48em) {
   .form_heading {
     font-size: var(--step-5);
   }
@@ -1341,7 +1368,7 @@ p {
   margin-inline: auto;
   width: 100%;
 }
-@media only screen and (min-width: 40em) {
+@media only screen and (min-width: 48em) {
   .contact_form {
     max-width: 40rem;
   }

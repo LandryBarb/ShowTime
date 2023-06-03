@@ -27,13 +27,13 @@ $screen-size: 2.5;
   z-index: 200;
   overflow: hidden;
   transform: translate(-50%, -50%);
-  @include mediaQry(small) {
+  @include mediaQry(tablet) {
     
     right: 3rem;
     bottom: 15rem;
    
   }
-  @include mediaQry(medium){
+  @include mediaQry(laptop){
     bottom: 5rem;
     
 
@@ -77,27 +77,12 @@ $screen-size: 2.5;
 /* End of Progress Bar */
 
 .hero {
-
   margin-inline: auto;
-  // padding: unset;
-  // min-height: 100vh;
-  // display: grid;
-  // grid-template-columns: repeat(2, 1fr);
 
-@include mediaQry(small){
+
+@include mediaQry(tablet){
   padding: unset;
-  // hgroup{
-  //   grid-column: 1/ -1;
-  //   grid-row: 1;
-  //   order: 1;
-  // }
-  // .hero_image{
-  //   grid-column: 2/-1;
-  //   grid-row: 1;
-    
-  //   align-self: flex-end;
-  //   justify-self: end;
-  // }
+
 }
  
 }
@@ -108,41 +93,53 @@ $screen-size: 2.5;
   height: 100vh;
 }
 .hero__heading {
-  // font-size: var(--step-7);
-  font-size: calc($screen-size * var(--step-3));
+ 
+  // font-size: calc($screen-size * var(--step-3));
   color: var(--brand);
   grid-column: 1/-1;
   grid-row: 1/3;
+
   text-align: center;
-  // grid-column: 1/-1;
-  // grid-row: 1/-1;
-  @include mediaQry(small) {
+ 
+  @include mediaQry(phone) {
     
-    font-size: calc($screen-size * var(--step-6));
-    grid-column: 1/-1;
-    grid-row: 1/-1;
-    
+    font-size: calc($screen-size * var(--step-2));
+  
+  }
+  @include mediaQry(tablet){
+    font-size: calc($screen-size * var(--step-3));
+  text-align: center;
 
   }
-  @include mediaQry(medium){
-    font-size: calc($screen-size * var(--step-7));
-  text-align: center;
+  @include mediaQry(laptop){
+    font-size: calc($screen-size * var(--step-4));
+    text-align: center;
 
+  }
+  @include mediaQry(desktop){
+    grid-row: 1/-1;
+    font-size: calc($screen-size * var(--step-7));
+    text-align: center;
   }
 }
 
 .hero__subheading {
-  grid-row: 4;
+
   text-align: center;
   text-transform: capitalize;
 
   grid-column: 1/-1;
-  font-size: var(--step-6);
+  font-size: var(--step-4);
   font-weight: var(--fw-bold);
-  @include mediaQry(small) {
-    grid-column: 1/-1;
+  @include mediaQry(tablet) {
+  
     grid-row: 4;
     font-size: var(--step-5);
+  }
+  @include mediaQry(laptop) {
+    grid-column: 1/-1;
+    // grid-row: 4;
+    font-size: var(--step-6);
   }
 }
 .massive_heading {
@@ -159,7 +156,7 @@ $screen-size: 2.5;
   background-color: var(--brand);
 
   min-height: 100vh;
-  @include mediaQry(small) {
+  @include mediaQry(tablet) {
     min-height: unset;
   }
   align-items: center;
@@ -168,19 +165,19 @@ $screen-size: 2.5;
     grid-area: 1 / 1 / 2 / 2;
   }
   .massive_heading {
-    font-size: calc(var(--step-4) * 3);
-    rotate: 10deg;
+    font-size: calc(var(--step-4) * 3.5);
+    // rotate: 10deg;
 
-    @include mediaQry(small) {
-      font-size: calc(var(--step-7) * 3.5);
+    @include mediaQry(tablet) {
+      font-size: calc(var(--step-5) * 3.5);
     }
   }
   &_text {
     text-align: center;
 
-    @include mediaQry(small) {
+    @include mediaQry(tablet) {
       text-align: unset;
-      max-width: 70%;
+      max-width: 80%;
       margin-inline: auto;
     }
   }
@@ -192,7 +189,7 @@ $screen-size: 2.5;
     letter-spacing: 0.3rem;
     line-height: 1.9;
 
-    @include mediaQry(small) {
+    @include mediaQry(tablet) {
       line-height: 1.9;
       color: var(--body-text);
     font-size: var(--step-6);
@@ -225,9 +222,9 @@ $screen-size: 2.5;
 section {
 
 
-  @include mediaQry(small){
+  @include mediaQry(tablet){
       padding-block: 10rem;
-  max-width: 1920px;
+  // max-width: 1920px;
 }
 }
 
@@ -243,14 +240,18 @@ section {
   display: grid;
   position: relative;
   place-content: center;
-  @include mediaQry(medium) {
+  @include mediaQry(tablet) {
     place-content: unset;
   }
   .section_heading {
     grid-area: 1 / 1 / 2 / 2;
     font-size: calc(var(--step-4) * 3);
-    @include mediaQry(small) {
-      font-size: calc(var(--step-7) * 2.5);
+    @include mediaQry(tablet) {
+      font-size: calc(var(--step-6) * 2.5);
+    }
+    @include mediaQry(laptop){
+      font-size: calc(var(--step-6) * 2.5);
+
     }
   }
 }
@@ -260,15 +261,19 @@ section {
   & > .auto_grid {
     align-items: center;
     justify-items: center;
+    gap: var(--space-1);
+   @include mediaQry(tablet){
+    grid-template-columns: repeat(auto-fit, minmax(45em, 1fr)); // For larger screens
+   }
     
   }
 }
 
 .project {
   width: 20rem;
-  height: 35rem;
+  height: 30rem;
   overflow: hidden;
-  margin: var(--space-5);
+  
   background-color: #000;
   display: flex;
   justify-content: center;
@@ -278,15 +283,16 @@ section {
   cursor: pointer;
   perspective: 20rem;
   transition: opacity 0.5s;
-  @include mediaQry(small) {
-    width: 30rem;
-    height: 40rem;
-    margin: var(--space-1);
+  @include mediaQry(tablet) {
+    width: 25rem;
+    height: 35rem;
+  
   }
 }
 
 .project img {
   width: 90%;
+  margin: auto;
   object-fit: cover;
   position: absolute;
   top: 2rem;
@@ -347,6 +353,7 @@ section {
   z-index: 100;
   scroll-behavior: smooth;
   animation: imgWrapperAnim 1s forwards;
+  
 }
 
 @keyframes imgWrapperAnim {
@@ -366,7 +373,7 @@ section {
   display: block;
   transform-origin: top center;
   animation: imgAnim 1s 1s both;
-  @include mediaQry(small) {
+  @include mediaQry(tablet) {
     padding: 7rem 20rem;
   }
 }
@@ -396,7 +403,7 @@ section {
   z-index: 200;
   transform: scale(0);
   visibility: hidden;
-  @include mediaQry(small) {
+  @include mediaQry(tablet) {
     right: 5rem;
     font-weight: unset;
   }
@@ -423,7 +430,7 @@ section {
 
   .massive_heading {
     font-size: calc(var(--step-4) * 3);
-    @include mediaQry(small) {
+    @include mediaQry(tablet) {
       font-size: calc(var(--step-7) * 2.5);
     }
   }
@@ -442,7 +449,7 @@ section {
   width: 80%;
   margin: var(--space-2) 0;
   border-block-end: 0.2rem solid var(--brand);
-  @include mediaQry(small) {
+  @include mediaQry(tablet) {
     width: 70%;
   }
 
@@ -454,8 +461,11 @@ section {
 
     height: 3rem;
 
-    @include mediaQry(small) {
+    @include mediaQry(tablet) {
       padding-inline-end: unset;
+      height: 5rem;
+    }
+    @include mediaQry(laptop){
       height: 10rem;
     }
     span {
@@ -469,7 +479,7 @@ section {
       pointer-events: none;
       text-transform: uppercase;
       transition: right 0.5s;
-      @include mediaQry(small) {
+      @include mediaQry(tablet) {
         font-size: var(--step-6);
       }
     }
@@ -484,7 +494,7 @@ section {
     visibility: hidden;
     opacity: 0;
     transition: all 0.2s;
-    @include mediaQry(small) {
+    @include mediaQry(tablet) {
       font-size: var(--step-4);
       line-height: unset;
     }
@@ -495,7 +505,7 @@ section {
   visibility: visible;
   opacity: 1;
 
-  @include mediaQry(small) {
+  @include mediaQry(tablet) {
     height: 15rem;
   }
   transition: height 0.5s, opacity 0.5s 0.5s;
@@ -514,8 +524,8 @@ section {
     grid-area: 1/1/2/2;
   }
   .massive_heading {
-    font-size: calc(var(--step-3) * 3);
-    @include mediaQry(small) {
+    font-size: calc(var(--step-2) * 3.5);
+    @include mediaQry(tablet) {
       font-size: calc(var(--step-6) * 2.5);
     }
     opacity: 0.1;
@@ -533,7 +543,7 @@ section {
   color: var(--brand);
   margin-block-end: var(--space-2);
   transition: opacity 0.3s;
-  @include mediaQry(small) {
+  @include mediaQry(tablet) {
     font-size: var(--step-5);
   }
 }
@@ -544,7 +554,7 @@ section {
   margin-inline: auto;
   width: 100%;
 
-  @include mediaQry(small) {
+  @include mediaQry(tablet) {
     max-width: 40rem;
   }
 
@@ -557,7 +567,7 @@ section {
     color: var(--body-text);
     border-radius: 10px;
     margin-inline: auto;
-    @include mediaQry(small) {
+    @include mediaQry(tablet) {
     }
     &::placeholder {
       font-family: $ff-body;

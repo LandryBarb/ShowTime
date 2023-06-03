@@ -13,7 +13,7 @@ $h1-font-size: 48px;
 .mouse-dot {
 
   display: none;
-  @include mediaQry(small){
+  @include mediaQry(phone){
     display: unset;
     border-radius: 50%;
     position: fixed;
@@ -27,7 +27,7 @@ $h1-font-size: 48px;
 
 .mouse-circle {
  
-@include mediaQry(small){
+@include mediaQry(phone){
   display: unset;
   width: 3rem;
   height: 3rem;
@@ -101,7 +101,7 @@ $h1-font-size: 48px;
   transform: translate(-50%, -50%);
   transition: opacity 0.2s;
   mix-blend-mode:hard-light;
- @include mediaQry(small){
+ @include mediaQry(tablet){
   left: unset;
   right: 0;
  }
@@ -140,7 +140,7 @@ $h1-font-size: 48px;
 ul{
  
  justify-content: center;
-  @include mediaQry(small){
+  @include mediaQry(tablet){
     justify-content: space-evenly;
   }
 }
