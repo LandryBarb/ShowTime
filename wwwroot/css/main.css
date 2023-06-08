@@ -939,7 +939,7 @@ section:not(:first-of-type) {
   }
 }
 
-img {
+.headshot {
   position: absolute;
   top: 0;
   right: 0;
@@ -1235,7 +1235,7 @@ img {
   transform-origin: top center;
   animation: imgAnim 1s 1s both;
 }
-@media only screen and (min-width: 48em) {
+@media only screen and (min-width: 80em) {
   .project-img {
     padding: 7rem 20rem;
   }
